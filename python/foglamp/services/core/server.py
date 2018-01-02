@@ -95,7 +95,7 @@ class Server:
         'enableHttp': {
             'description': 'Enable or disable the connection via HTTP',
             'type': 'boolean',
-            'default': 'false'
+            'default': 'true'
         },
         'authProviders': {
             'description': 'A JSON object which is an array of authentication providers to use '
@@ -181,9 +181,10 @@ class Server:
 
     @classmethod
     async def rest_api_config(cls):
-        """
+        """ Write and Read the config for the FogLAMP REST API
 
-        :return: port and TLS enabled info
+            the port
+            the Flag to decide to enable FogLAMP REST API on HTTP or HTTPS
         """
         try:
             config = cls._REST_API_DEFAULT_CONFIG
@@ -328,7 +329,6 @@ class Server:
             service_app = cls._make_app()
 
             loop.run_until_complete(cls.rest_api_config())
-            # print(cls.is_rest_server_tls_enabled, cls.rest_server_port)
 
             # ssl context
             ssl_ctx = None
