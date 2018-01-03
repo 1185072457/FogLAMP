@@ -939,7 +939,7 @@ values ('543a59ce-a9ca-11e7-abc4-cec278b6b50a', 'south', 'CC2650POLL', 1,
 -- Start the South Poll mode south server at start-up
 -- insert into foglamp.schedules(id, schedule_name, process_name, schedule_type,
 -- schedule_interval, exclusive)
--- values ('543a59ce-a9ca-11e7-abc4-cec278b6b50a', 'south', 'POLL', 1,
+-- values ('3ca4cc36-f074-11e7-8c3f-9a214cf093ae', 'south', 'POLL', 1,
 -- '0:0', true);
 
 
